@@ -4,15 +4,18 @@
 let num1 = Number(prompt("Ingrese el primer número"));
 let num2 = Number(prompt("Ingrese el segundo número"));
 
+while(num1 == "" || num2 == "" || isNaN(num1) || isNaN(num2)){
+    alert("No ingresó un valor correcto.");
+    num1 = Number(prompt("Ingrese el primer número"));
+    num2 = Number(prompt("Ingrese el segundo número"));
+}
+
 if (num1 < num2){
     alert("El segundo numero ingresado es el mayor: " + num2);
 }else if (num1 > num2){
     alert("El primer numero ingresado es el mayor: " + num1);  
-}else if (num1 == "" || num2 == ""){
-    alert("No ingresó un número.");
 }else if (num1 == num2){
     alert("Ambos números son iguales: " + num1);
 }else {
     alert("No ingresó un valor correcto.");
 }
-

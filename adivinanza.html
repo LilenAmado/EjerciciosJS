@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de adivinanza</title>
+</head>
+<body>
+
+    <h1 id="h1"></h1>
+
+
+    <script>
+
+        let numeroSecreto = Math.random() * 100;
+        console.log(numeroSecreto);
+
+        numeroSecreto = parseInt(numeroSecreto);
+
+        console.log(numeroSecreto);
+
+        let mensaje = "Adivine el número (1-100) para poder ver el mensaje oculto. Si quiere terminar el juego ponga un 0";
+        
+
+        while(true){
+            let numeroUsuario = prompt(mensaje);
+
+            if(numeroUsuario == numeroSecreto){
+                alert("GANASTE!");
+                document.getElementById('h1').innerHTML="<h1 style='color:green; font-size:30px;'>Concéntrate en lo que quieres lograr y ganarás. No lo olvides.</h1>";
+                break;   
+            }else if(numeroUsuario==="" || numeroUsuario===null){
+                alert("No ingresó ningun número");            
+            }else if(numeroUsuario>numeroSecreto){
+                alert("El número es menor a " + numeroUsuario);
+            }else if(numeroUsuario<numeroSecreto && numeroUsuario!=0){
+                alert("El número es mayor a " + numeroUsuario);
+            }else if(numeroUsuario==0){
+                alert("El juego finalizó");
+                document.getElementById('h1').innerHTML="El juego finalizó";
+                break;
+            }else{
+                alert("No ingresó ningun número");
+            }
+        }
+
+    </script>
+</body>
+</html>

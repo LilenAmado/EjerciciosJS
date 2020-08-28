@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Formulario - MasterJS</title>
+    <script src="masterJS-EjercicioFormulario.js"></script>
+    <style>
+        .box{
+            width:200px;
+            float: left;
+            margin: 20px;
+            height: 200px;
+        }
+        .dashed{
+            border: 3px dashed black;
+            padding-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio Formulario - MasterJS</h1>
+    <ol>
+        <p>Formulario:</p>
+        <li>Formulario con 3 campos: Nombre, Apellido y edad</li>
+        <li>Botón de enviar el formulario: evento submit</li>
+        <li>Tener un botón que al darle click nos muestre los datos actuales del formulario</li>
+        <li>Validación del formulario</li>
+    </ol>
+    <hr>
+    <div class="box">
+        <form action="" id="formulario" method="POST" onsubmit="return false">
+            <p>
+                <label for="nombre">Nombre: </label> <br>
+                <input type="text" name="nombre" id="nombre"> <br>
+                <small id="errorNombre"></small>
+            </p>
+            <p>
+                <label for="nombre">Apellido: </label> <br>
+                <input type="text" name="apellido" id="apellido"> <br>
+                <small id="errorApellido"></small>
+            </p>
+            <p>
+                <label for="nombre">Edad: </label> <br>
+                <input type="number" name="edad" id="edad"> <br>
+                <small id="errorEdad"></small>
+            </p>
+            <p>
+                <input type="submit" value="Enviar" id="boton">
+            </p>
+        </form>
+    </div>
+    <div class="box dashed">
+        <h3>Datos:</h3>
+        <hr>
+        <p id="p_nombre"></p>
+        <p id="p_apellido"></p>
+        <p id="p_edad"></p>
+    </div>
+
+</body>
+</html>

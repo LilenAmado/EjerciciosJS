@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Button</title>
+    <style>
+        #box{
+            width: 300px;
+            height: 50px;
+            border: dashed 5px black;
+            text-align: center;
+            line-height: 50px;
+            background-color: rgb(204, 201, 201);
+            font-size: 19px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: none;
+        }
+        button{
+            margin: 1rem auto;
+        }
+    </style>
+</head>
+<body>
+    <button id="mostrar">Mostrar</button>
+    <button id="ocultar">Ocultar</button>
+    <div id="box">Master en JavaScript</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(()=>{
+
+            /*let box = document.getElementById("box");
+            let mostrar = document.getElementById("mostrar");
+            let ocultar = document.getElementById("ocultar");
+            
+            mostrar.addEventListener('click',()=>{
+                box.style.display = "block";
+            })
+
+            ocultar.addEventListener('click',()=>{
+                box.style.display = "none";
+            })*/
+
+            let box = $('#box')
+            let mostrar = $('#mostrar')
+            let ocultar = $('#ocultar')
+            
+            mostrar.click(function(){
+                box.css('display', 'block');
+            })
+            ocultar.click(function(){
+                box.css('display', 'none');
+            })
+        })
+    </script>
+</body>
+</html>
